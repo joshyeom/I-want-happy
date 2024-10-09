@@ -13,6 +13,12 @@
     line-height: 1.5; /* 줄 높이 기본값 설정 */
   }
   
+  body{
+    font-family: "aller-display", sans-serif;
+    font-weight: 400;
+    font-style: bold;
+  }
+
   /* 제목 요소의 기본 스타일 초기화 */
   h1, h2, h3, h4, h5, h6 {
     font-weight: normal; /* 기본 폰트 두께 설정 */

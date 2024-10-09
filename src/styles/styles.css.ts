@@ -23,9 +23,7 @@ export const sectionStyle = style({
 export const buttonStyle = style({
   borderRadius: "100px",
   color: "#000000",
-  fontFamily: "wfbs",
   fontSize: "100px",
-  fontStyle: "normal",
   fontWeight: 700,
   lineHeight: "95px",
   textTransform: "none",
