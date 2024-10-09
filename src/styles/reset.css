@@ -1,0 +1,51 @@
+/* reset.css */
+
+/* 모든 요소의 마진과 패딩을 0으로 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* 박스 모델 설정 */
+  }
+  
+  /* 블록 요소의 기본 스타일 설정 */
+  html, body {
+    height: 100%; /* 전체 높이 설정 */
+    line-height: 1.5; /* 줄 높이 기본값 설정 */
+  }
+  
+  /* 제목 요소의 기본 스타일 초기화 */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: normal; /* 기본 폰트 두께 설정 */
+  }
+  
+  /* 리스트 스타일 초기화 */
+  ul, ol {
+    list-style: none; /* 리스트 스타일 제거 */
+  }
+  
+  /* 링크 스타일 초기화 */
+  a {
+    text-decoration: none; /* 링크 밑줄 제거 */
+    color: inherit; /* 링크 색상을 상속받도록 설정 */
+  }
+  
+  /* 버튼 기본 스타일 초기화 */
+  button {
+    background: none; /* 기본 배경 제거 */
+    border: none; /* 기본 테두리 제거 */
+    padding: 0; /* 기본 패딩 제거 */
+    font: inherit; /* 폰트 상속 */
+  }
+  
+  /* 이미지 기본 스타일 초기화 */
+  img {
+    max-width: 100%; /* 이미지의 최대 너비를 부모 요소에 맞추기 */
+    height: auto; /* 자동 높이 조정 */
+  }
+  
+  /* 테이블 기본 스타일 초기화 */
+  table {
+    border-collapse: collapse; /* 테두리 중복 제거 */
+    width: 100%; /* 기본 너비 설정 */
+  }
+  
