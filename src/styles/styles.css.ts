@@ -39,3 +39,20 @@ export const buttonStyle = style({
     outline: "none",
   },
 });
+
+export const headerStyle = style({
+  WebkitAlignItems: "center",
+  display: "flex",
+  width: "100vw",
+  alignItems: "center",
+  height: "515px",
+  paddingBottom: "115px",
+  paddingLeft: "5.5%",
+  paddingRight: "6%",
+  paddingTop: "300px",
+  overflow: "hidden",
+});
+
+export const headerButtonStyle = style({
+  paddingRight: "20px",
+});
