@@ -1,17 +1,16 @@
 import { useState } from "react"
 import { cardHoverStyle, cardHoverVisibleStyle, cardStyle } from "../styles/styles.css"
-import { useNavigate } from "react-router-dom"
 import { useNavigateToEncodedUrl } from "../hooks/useNavigateToEncodedUrl"
 
 const Card = ({ url, idx }: { url: string , idx: number}) => {
     const [isHovered, setIsHovered] = useState(false)
-    const navigate = useNavigate()
+    const navigateToEncodedUrl = useNavigateToEncodedUrl(url);
 
     return(
         <section className={cardStyle}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            onClick={() => useNavigateToEncodedUrl(url)}
+            onClick={navigateToEncodedUrl}
         >
               <div className={`${cardHoverStyle} ${isHovered ? cardHoverVisibleStyle : ''}`}>
                 <span style={{fontSize: "17px", lineHeight: "22px", fontWeight: "400", color: "white"}}>{idx}</span>
