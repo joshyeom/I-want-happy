@@ -4,13 +4,13 @@ import { useNavigateToEncodedUrl } from "../hooks/useNavigateToEncodedUrl"
 
 const Card = ({ url, idx }: { url: string , idx: number}) => {
     const [isHovered, setIsHovered] = useState(false)
-    const navigateToEncodedUrl = useNavigateToEncodedUrl(url);
+    const navigateToEncodedUrl = useNavigateToEncodedUrl();
 
     return(
         <section className={cardStyle}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            onClick={navigateToEncodedUrl}
+            onClick={() => navigateToEncodedUrl(url)}
         >
               <div className={`${cardHoverStyle} ${isHovered ? cardHoverVisibleStyle : ''}`}>
                 <span style={{fontSize: "17px", lineHeight: "22px", fontWeight: "400", color: "white"}}>{idx}</span>
