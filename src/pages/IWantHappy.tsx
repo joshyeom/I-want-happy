@@ -1,5 +1,5 @@
 import Header from "../components/Header"
-import Image from "../components/Image"
+import Image from "../components/Card"
 import ToTop from "../components/ToTop"
 import { gridMainStyle } from "../styles/styles.css"
 const IWantHappy = () => {

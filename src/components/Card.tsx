@@ -2,7 +2,7 @@ import { useState } from "react"
 import { cardHoverStyle, cardHoverVisibleStyle, cardStyle } from "../styles/styles.css"
 import { useNavigate } from "react-router-dom"
 
-const Image = ({ url, idx }: { url: string , idx: number}) => {
+const Card = ({ url, idx }: { url: string , idx: number}) => {
     const [isHovered, setIsHovered] = useState(false)
     const navigate = useNavigate()
 
@@ -21,4 +21,4 @@ const Image = ({ url, idx }: { url: string , idx: number}) => {
     )
 }
 
-export default Image
+export default Card
