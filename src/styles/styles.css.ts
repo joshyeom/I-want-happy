@@ -66,7 +66,7 @@ export const gridMainStyle = style({
 
 export const cardStyle = style({
   position: 'relative',
-  width: '303.5px',
+  width: '20%',
   height: '345.61px',
   display: 'flex',
   justifyContent: 'center',
