@@ -8,6 +8,7 @@ export const mainStyle = style({
   flexDirection: "column",
   justifyContent: "center",
   padding: "20px",
+  paddingLeft: "40px",
 });
 
 export const sectionStyle = style({

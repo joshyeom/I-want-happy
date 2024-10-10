@@ -1,6 +1,8 @@
+import Header from "../components/Header"
+
 const WithLove = () => {
     return(
-        <div></div>
+        <Header/>
     )
 }
 

@@ -1,6 +1,13 @@
+import Header from "../components/Header"
+import { mainStyle } from "../styles/styles.css"
+
 const IWantHappy = () => {
     return(
-        <div></div>
+        <div style={{overflow: "hidden"}}>
+            <Header/>
+            <main className={mainStyle}>
+            </main>
+        </div>
     )
 }
 

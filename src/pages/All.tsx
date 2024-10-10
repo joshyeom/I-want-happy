@@ -1,6 +1,8 @@
+import Header from "../components/Header"
+
 const All = () => {
     return(
-        <div></div>
+        <Header/>
     )
 }
 
