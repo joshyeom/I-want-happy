@@ -13,7 +13,7 @@ const Card = ({ url, idx, alt }: { url: string , idx: number, alt: string}) => {
             onClick={() => navigateToEncodedUrl(url)}
         >
               <div className={`${cardHoverStyle} ${isHovered ? cardHoverVisibleStyle : ''}`}>
-                <span style={{fontSize: "17px", lineHeight: "22px", fontWeight: "400", color: "white"}}>{Math.abs(idx - 43)}</span>
+                <span style={{fontSize: "17px", lineHeight: "22px", fontWeight: "400", color: "white"}}>{idx}</span>
                 <span style={{fontSize: "14px", lineHeight: "18px", fontWeight: "400", paddingTop: "12px", color: "white"}}>2024</span>
             </div>
             <img src={url} alt={alt} style={{height: "200px"}}/>
