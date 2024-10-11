@@ -4,7 +4,6 @@ import { getDownloadURL, listAll, ref } from 'firebase/storage';
 export const fetchImage = async (folderPath: string): Promise<string[]> => {
   try {
     const folderRef = ref(storage, `${folderPath}`);
-    console.log(folderRef);
     const res = await listAll(folderRef);
 
     const urls = await Promise.all(
