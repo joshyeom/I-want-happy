@@ -110,3 +110,14 @@ export const toTopStyle = style({
     backgroundColor: 'rgba(0, 0, 0, 0.2)',
   },
 });
+
+export const ModalStyle = style({
+  width: '100vw',
+  height: '100vh',
+  zIndex: 3,
+  position: 'absolute',
+  backgroundColor: 'white',
+  top: 0,
+  display: 'flex',
+  justifyContent: 'center',
+});
