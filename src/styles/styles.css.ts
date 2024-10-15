@@ -48,7 +48,6 @@ export const headerStyle = style({
   alignItems: 'center',
   paddingLeft: '51px',
   paddingTop: '65px',
-  overflow: 'hidden',
 });
 
 export const headerButtonStyle = style({
