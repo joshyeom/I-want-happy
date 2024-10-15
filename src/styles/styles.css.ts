@@ -118,5 +118,6 @@ export const ModalStyle = style({
   top: 0,
   display: 'flex',
   justifyContent: 'center',
+  alignItems: 'center',
   gap: '100px',
 });
