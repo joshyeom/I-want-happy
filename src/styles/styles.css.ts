@@ -56,19 +56,21 @@ export const headerButtonStyle = style({
 });
 
 export const gridMainStyle = style({
-  padding: '100px 0',
+  padding: '100px 18px',
   display: 'flex',
   flexWrap: 'wrap',
+  gap: '10px',
 });
 
 export const cardStyle = style({
   position: 'relative',
-  width: '20%',
+  width: '16.1%',
   height: '345.61px',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
   cursor: 'pointer',
+  backgroundColor: 'rgba(245, 245, 245, 1)',
 });
 
 export const cardHoverStyle = style({

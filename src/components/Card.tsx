@@ -1,10 +1,8 @@
 import { useState } from "react"
 import { cardHoverStyle, cardHoverVisibleStyle, cardStyle } from "../styles/styles.css"
-import { useNavigateToEncodedUrl } from "../hooks/useNavigateToEncodedUrl"
 
 const Card = ({ url, idx, alt, openModal}: { url: string , idx: number, alt: string, openModal: (url: string) => void}) => {
     const [isHovered, setIsHovered] = useState(false)
-    const navigateToEncodedUrl = useNavigateToEncodedUrl();
 
     return(
         <section className={cardStyle}
