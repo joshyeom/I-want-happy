@@ -14,7 +14,7 @@ const IWantHappy = () => {
 
     return(
         <div style={{overflow: "hidden", position: "relative"}}>
-            <Header/>
+            <Header currentPage="i-want-happy"/>
             <ToTop/>
             <main className={gridMainStyle}>
                 {

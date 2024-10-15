@@ -13,7 +13,7 @@ const WithLove = () => {
 
     return(
         <div style={{overflow: "hidden", position: "relative"}}>
-            <Header/>
+            <Header currentPage="work"/>
             <ToTop/>
             <main className={gridMainStyle}>
                 {

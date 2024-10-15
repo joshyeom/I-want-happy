@@ -46,11 +46,8 @@ export const headerStyle = style({
   display: 'flex',
   width: '100vw',
   alignItems: 'center',
-  height: '515px',
-  paddingBottom: '230px',
-  paddingLeft: '5.5%',
-  paddingRight: '6%',
-  paddingTop: '300px',
+  paddingLeft: '51px',
+  paddingTop: '65px',
   overflow: 'hidden',
 });
 
