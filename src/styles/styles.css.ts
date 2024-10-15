@@ -43,11 +43,11 @@ export const buttonStyle = style({
 
 export const headerStyle = style({
   WebkitAlignItems: 'center',
+  position: 'absolute',
   display: 'flex',
-  width: '100vw',
   alignItems: 'center',
-  paddingLeft: '51px',
-  paddingTop: '65px',
+  left: '51px',
+  top: '65px',
 });
 
 export const headerButtonStyle = style({
@@ -55,7 +55,7 @@ export const headerButtonStyle = style({
 });
 
 export const gridMainStyle = style({
-  padding: '100px 18px',
+  padding: '150px 18px 100px 18px',
   display: 'flex',
   flexWrap: 'wrap',
   gap: '10px',
@@ -63,7 +63,7 @@ export const gridMainStyle = style({
 
 export const cardStyle = style({
   position: 'relative',
-  width: '16.1%',
+  width: '19.45%',
   height: '345.61px',
   display: 'flex',
   justifyContent: 'center',
