@@ -31,8 +31,8 @@ const Header = ({style, currentPage}: {style?: CSSProperties, currentPage: strin
                     onMouseEnter={() => setIsMouseEnter(true)}
                     onMouseLeave={() => setIsMouseEnter(false)}
                     >
-                    <button className={headerButtonStyle} style={handleButtonColor('0-100')} onClick={() => navigate('/1-100')}>1 - 100</button>
-                    <button className={headerButtonStyle} style={handleButtonColor('100-200')} onClick={() => navigate('/100-200')}>100 - 200</button>
+                    <button className={headerButtonStyle} style={handleButtonColor('1-100')} onClick={() => navigate('/all/1-100')}>1 - 100</button>
+                    <button className={headerButtonStyle} style={handleButtonColor('100-200')} onClick={() => navigate('/all/100-200')}>100 - 200</button>
                 </div>
             </section>
         </header>
