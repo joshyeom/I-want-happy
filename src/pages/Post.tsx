@@ -19,7 +19,7 @@ const Post = () => {
     return(
         <>
             <div style={{overflow: "hidden", position: "relative"}}>
-            <Header style={{paddingBottom: '115px'}}/>
+            <Header style={{paddingBottom: '115px'}} currentPage="post"/>
             <main style={{width: '100%', display: "flex", flexDirection: "column", alignItems: "center"}}>
                 <section style={{width: '1400px', display: "flex", justifyContent: "center", padding: '30px 0 20px 0'}}>
                     <img src={replaceUrl} alt="Main Image" onClick={openModal} style={{ cursor: 'zoom-in'}}/>
