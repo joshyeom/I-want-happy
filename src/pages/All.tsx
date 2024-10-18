@@ -3,7 +3,7 @@ import Header from "../components/Header"
 import { useFetchImages } from "../hooks/useFetchImages";
 import { useState } from "react";
 import Modal from "../components/Modal";
-import Card from "../components/Card";
+// import Card from "../components/Card";
 
 const All = () => {
     const { url } = useParams<{ url: string}>();
@@ -12,10 +12,10 @@ const All = () => {
     const [isModalOpen, setModalOpen] = useState(false);
     const [selectedImgUrl, setSelectedImgUrl] = useState<string | null>(null);
 
-    const openModal = (url: string) => {
-        setSelectedImgUrl(url); 
-        setModalOpen(true);
-    };
+    // const openModal = (url: string) => {
+    //     setSelectedImgUrl(url); 
+    //     setModalOpen(true);
+    // };
 
     const closeModal = () => {
         setSelectedImgUrl(null);
