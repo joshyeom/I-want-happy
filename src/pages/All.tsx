@@ -1,13 +1,14 @@
 import { useParams } from "react-router-dom"
 import Header from "../components/Header"
-import { useFetchImages } from "../hooks/useFetchImages";
 import { useState } from "react";
 import Modal from "../components/Modal";
+import { useFetchMultipleImages } from "../hooks/useFetchMultipleImages";
 // import Card from "../components/Card";
 
 const All = () => {
     const { url } = useParams<{ url: string}>();
-    const { isLoading, error, data } = useFetchImages(url === '1-100' ? 'resized-happy' : 'resized-withlove')
+    const queries = useFetchMultipleImages(url === '1-100' ? ['happy','resized-happy'] : ['withlove','resized-withlove'])
+
 
     const [isModalOpen, setModalOpen] = useState(false);
     const [selectedImgUrl, setSelectedImgUrl] = useState<string | null>(null);
@@ -22,11 +23,13 @@ const All = () => {
         setModalOpen(false);
     }
 
-    Worker
+    const isLoading = queries.some(query => query.isLoading);
+    const hasError = queries.some(query => query.error);
+    
+    if (isLoading) return <div>Loading...</div>;
+    if (hasError) return <div>Error loading images</div>;
 
-    if (isLoading) return <div>is Loading...</div>;
-
-    if (error) return <div>Error</div>
+    const resizedImages = queries[1]?.data || [];
     
     return(
         <>
@@ -46,7 +49,7 @@ const All = () => {
                 {
                 // data가 100개가 되도록 하기 위해 필요한 대체 이미지의 수를 계산
                 Array.from({ length: 100 }).map((_, i) => {
-                    const imageUrl = data && i < data.length ? data[i] : ''; // 대체 이미지 URL
+                    const imageUrl = resizedImages && i < resizedImages.length ? resizedImages[i] : ''; // 대체 이미지 URL
                     return (
                             <img 
                                 src={imageUrl} 

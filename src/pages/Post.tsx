@@ -30,7 +30,6 @@ const Post = () => {
                             <MiniCard url={imageUrl}/>
                         ))
                     }
-                    
                 </section>
             </main>
             </div>
