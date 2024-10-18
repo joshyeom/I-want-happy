@@ -43,15 +43,11 @@ export const buttonStyle = style({
 
 export const headerStyle = style({
   WebkitAlignItems: 'center',
+  position: 'absolute',
   display: 'flex',
-  width: '100vw',
   alignItems: 'center',
-  height: '515px',
-  paddingBottom: '230px',
-  paddingLeft: '5.5%',
-  paddingRight: '6%',
-  paddingTop: '300px',
-  overflow: 'hidden',
+  left: '51px',
+  top: '65px',
 });
 
 export const headerButtonStyle = style({
@@ -59,19 +55,21 @@ export const headerButtonStyle = style({
 });
 
 export const gridMainStyle = style({
-  padding: '100px 0',
+  padding: '150px 18px 100px 18px',
   display: 'flex',
   flexWrap: 'wrap',
+  gap: '10px',
 });
 
 export const cardStyle = style({
   position: 'relative',
-  width: '20%',
+  width: '19.45%',
   height: '345.61px',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
   cursor: 'pointer',
+  backgroundColor: 'rgba(245, 245, 245, 1)',
 });
 
 export const cardHoverStyle = style({
@@ -115,9 +113,11 @@ export const ModalStyle = style({
   width: '100vw',
   height: '100vh',
   zIndex: 3,
-  position: 'absolute',
-  backgroundColor: 'white',
+  position: 'fixed',
+  backgroundColor: 'rgba(0,0,0,0.7)',
   top: 0,
   display: 'flex',
   justifyContent: 'center',
+  alignItems: 'center',
+  gap: '100px',
 });
