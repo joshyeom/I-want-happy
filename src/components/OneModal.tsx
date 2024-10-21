@@ -16,7 +16,7 @@ const OneModal = ({ onClose, imgUrl }: {onClose: () => void, imgUrl: string}) =>
     }, []);
 
     return createPortal(
-        <div className={ModalStyle} onClick={onClose}>
+        <div className={ModalStyle} onClick={onClose} style={{justifyContent: 'center'}}>
             <div style={{position: 'absolute', width: '447px', height: '90vh'}}>
                 {!isLoaded && (
                     <Skeleton/>
