@@ -4,7 +4,7 @@ import ToTop from "../components/ToTop"
 import { gridMainStyle } from "../styles/styles.css"
 import { useFetchImages } from "../hooks/useFetchImages"
 import { useState } from "react"
-import Modal from "../components/Modal"
+import TwoModal from "../components/TwoModal"
 
 const WithLove = () => {
   const { isLoading, error, data } = useFetchImages('withlove')
@@ -37,7 +37,7 @@ const WithLove = () => {
                 }
             </main>
             {isModalOpen && selectedImgUrl && (
-              <Modal onClose={closeModal} imgUrl={selectedImgUrl} />
+              <TwoModal onClose={closeModal} imgUrl={selectedImgUrl} />
             )}
         </div>
     )
