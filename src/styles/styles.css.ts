@@ -117,7 +117,6 @@ export const ModalStyle = style({
   backgroundColor: 'rgba(0,0,0,0.7)',
   top: 0,
   display: 'flex',
-  justifyContent: 'center',
   alignItems: 'center',
   gap: '100px',
 });

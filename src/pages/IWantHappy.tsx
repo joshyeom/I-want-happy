@@ -3,7 +3,7 @@ import Card from "../components/Card"
 import ToTop from "../components/ToTop"
 import { gridMainStyle } from "../styles/styles.css"
 import { useFetchImages } from "../hooks/useFetchImages"
-import Modal from "../components/Modal"
+import TwoModal from "../components/TwoModal"
 import { useState } from "react"
 
 const IWantHappy = () => {
@@ -39,7 +39,7 @@ const IWantHappy = () => {
                 }
             </main>
             {isModalOpen && selectedImgUrl && (
-              <Modal onClose={closeModal} imgUrl={selectedImgUrl} />
+              <TwoModal onClose={closeModal} imgUrl={selectedImgUrl} />
             )}
         </div>
     )
