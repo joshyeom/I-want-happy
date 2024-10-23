@@ -18,8 +18,8 @@ const Header = ({style, currentPage}: {style?: CSSProperties, currentPage: strin
         <header className={headerStyle} style={{...style}}>
             <section style={{position: 'relative'}}>
                 <button className={headerButtonStyle} onClick={() => navigate('/')}>YAP! YAP! YAP!</button>
-                <button className={headerButtonStyle} style={handleButtonColor('i-want-happy')} onClick={() => navigate('/i-want-happy')}>I WANT HAPPY</button>
-                <button className={headerButtonStyle} style={handleButtonColor('work')} onClick={() => navigate('/work')}>WITH LOVE</button>
+                <button className={headerButtonStyle} style={handleButtonColor('happy')} onClick={() => navigate('/happy')}>I WANT HAPPY</button>
+                <button className={headerButtonStyle} style={handleButtonColor('love')} onClick={() => navigate('/love')}>WITH LOVE</button>
                 <button className={headerButtonStyle} onMouseEnter={() => setIsMouseEnter(true)} onMouseLeave={() => setIsMouseEnter(false)} style={{position: 'relative'}}>ALL</button>
                 <div style={{
                     display: isMouseEnter ? 'block' : 'none',

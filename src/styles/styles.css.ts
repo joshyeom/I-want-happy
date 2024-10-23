@@ -42,12 +42,13 @@ export const buttonStyle = style({
 });
 
 export const headerStyle = style({
-  WebkitAlignItems: 'center',
+  backgroundColor: 'white',
   position: 'absolute',
   display: 'flex',
   alignItems: 'center',
-  left: '51px',
-  top: '65px',
+  padding: '65px 51px',
+  height: '162px',
+  width: '100%',
 });
 
 export const headerButtonStyle = style({
@@ -119,4 +120,13 @@ export const ModalStyle = style({
   display: 'flex',
   alignItems: 'center',
   gap: '100px',
+});
+
+export const detailsStyles = style({
+  width: '100vw',
+  height: '100vh',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
 });

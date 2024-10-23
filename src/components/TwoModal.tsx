@@ -3,8 +3,9 @@ import { createPortal } from 'react-dom';
 import { ModalStyle } from '../styles/styles.css';
 import Skeleton from './Skeleton';
 
-const TwoModal = ({ onClose, imgUrl }: {onClose: () => void, imgUrl: string}) => {
-    const [isLoaded, setIsLoaded] = useState(false)
+const TwoModal = ({ onClose, imgUrl, kakaoUrl }: {onClose: () => void, imgUrl: string, kakaoUrl: string}) => {
+    const [imgLoaded, setImgLoaded] = useState(false)
+    const [kakaoLoaded, setKakaoLoaded] = useState(false)
 
     useEffect(() => {
         document.body.style.overflow = 'hidden';
@@ -16,17 +17,17 @@ const TwoModal = ({ onClose, imgUrl }: {onClose: () => void, imgUrl: string}) =>
 
     return createPortal(
         <div className={ModalStyle} onClick={onClose} style={{justifyContent: 'space-around'}}>
-            <div style={{width: '447px', height: '90vh'}}>
-                {!isLoaded && (
+            <div style={{width: '447px', height: '90vh', position: 'relative'}}>
+                {!imgLoaded && (
                     <Skeleton/>
                 )}
-                <img src={imgUrl} alt="Modal Content" onLoad={() => setIsLoaded(true)} style={{height: '100%'}}/>
+                    <img src={imgUrl} alt="Modal Content" onLoad={() => setImgLoaded(true)} style={{height: '100%'}}/>
             </div>
-            <div style={{width: '447px', height: '90vh'}}>
-                {!isLoaded && (
+            <div style={{width: '447px', height: '90vh', position: 'relative'}}>
+                {!kakaoLoaded && (
                     <Skeleton/>
                 )}
-                    <img src="https://firebasestorage.googleapis.com/v0/b/imhappy-715f1.appspot.com/o/kakao%2F1.(TEXT).png?alt=media&token=b2cf4432-b37c-421c-88f8-e9b9c77d33bb" alt="Kakao Content" style={{height: '100%'}}/>
+                    <img src={kakaoUrl} alt="Kakao Content" onLoad={() => setKakaoLoaded(true)} style={{height: '100%'}}/>
             </div>
         </div>,
         document.body
