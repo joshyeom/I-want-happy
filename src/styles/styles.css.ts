@@ -121,3 +121,12 @@ export const ModalStyle = style({
   alignItems: 'center',
   gap: '100px',
 });
+
+export const detailsStyles = style({
+  width: '100vw',
+  height: '100vh',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+});
