@@ -1,8 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import './styles/reset.css'
-import IWantHappy from './pages/IWantHappy';
-import WithLove from './pages/WithLove';
+import Posts from './pages/Posts';
 import All from './pages/All';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
@@ -15,8 +14,7 @@ const App = () => {
       <Router>  
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="i-want-happy" element={<IWantHappy/>} />
-          <Route path="work" element={<WithLove/>} />
+          <Route path="/:theme" element={<Posts/>} />
           <Route path="all/:url" element={<All/>} />
         </Routes>
       </Router>
