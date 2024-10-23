@@ -42,12 +42,13 @@ export const buttonStyle = style({
 });
 
 export const headerStyle = style({
-  WebkitAlignItems: 'center',
+  backgroundColor: 'white',
   position: 'absolute',
   display: 'flex',
   alignItems: 'center',
-  left: '51px',
-  top: '65px',
+  padding: '65px 51px',
+  height: '162px',
+  width: '100%',
 });
 
 export const headerButtonStyle = style({
@@ -112,7 +113,7 @@ export const toTopStyle = style({
 export const ModalStyle = style({
   width: '100vw',
   height: '100vh',
-  zIndex: 3,
+  zIndex: 5,
   position: 'fixed',
   backgroundColor: 'rgba(0,0,0,0.7)',
   top: 0,
