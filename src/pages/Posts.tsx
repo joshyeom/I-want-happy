@@ -2,35 +2,43 @@ import Header from "../components/Header"
 import Card from "../components/Card"
 import ToTop from "../components/ToTop"
 import { gridMainStyle } from "../styles/styles.css"
-import { useFetchImages } from "../hooks/useFetchImages"
 import TwoModal from "../components/TwoModal"
 import { useState } from "react"
 import { useParams } from "react-router-dom"
 import { fetchDetails } from "../utils/fetchDetails"
 import { Details } from "../components/Details"
+import { useFetchMultipleImages } from "../hooks/useFetchMultipleImages"
 
 const Posts = () => {
   const { theme } = useParams()
-  const { isLoading, error, data } = useFetchImages(`${theme}`)
+  const queries = useFetchMultipleImages(theme === 'happy' ? ['happy','happy-kakao'] : ['love','love-kakao'])
   const [isModalOpen, setModalOpen] = useState(false);
   const [selectedImgUrl, setSelectedImgUrl] = useState<string | null>(null);
+  const [selectedKakaoUrl, setSelectedKakaoUrl] = useState<string | null>(null);
 
 
-  const openModal = (url: string) => {
-    setSelectedImgUrl(url); 
-    setModalOpen(true);
+  const openModal = (imageUrl: string, kakaoUrl: string) => {
+    setSelectedImgUrl(imageUrl); 
+    setSelectedKakaoUrl(kakaoUrl)
+    setModalOpen(true); 
   };
 
   const closeModal = () => {
     setSelectedImgUrl(null);
+    setSelectedKakaoUrl(null)
     setModalOpen(false);
   }
 
   if (!theme) return
 
-  if (isLoading) return <div>is Loading...</div>;
+  const isLoading = queries.some(query => query.isLoading);
+  const hasError = queries.some(query => query.error);
 
-  if (error) return <div>Error</div>
+  if (isLoading) return <div>Loading...</div>;
+  if (hasError) return <div>Error loading images</div>;
+
+  const images = queries[0]?. data || [];
+  const kakaoImages = queries[1]?.data || [];
 
   const details = fetchDetails(theme)
 
@@ -41,11 +49,11 @@ const Posts = () => {
             <Details details={details}/>
             <main className={gridMainStyle}>
                 {
-                  data?.map((v, i) => <Card url={v} alt={`Happy Image ${i}`} idx={i} key={v} openModal={openModal}/>)
+                  images?.map((v, i) => <Card url={v} alt={`Happy Image ${i}`} idx={i} key={v} openModal={() => openModal(v, kakaoImages[i])}/>)
                 }
             </main>
-            {isModalOpen && selectedImgUrl && (
-              <TwoModal onClose={closeModal} imgUrl={selectedImgUrl} />
+            {isModalOpen && selectedImgUrl && selectedKakaoUrl && (
+              <TwoModal onClose={closeModal} imgUrl={selectedImgUrl} kakaoUrl={selectedKakaoUrl}/>
             )}
         </div>
     )

@@ -113,7 +113,7 @@ export const toTopStyle = style({
 export const ModalStyle = style({
   width: '100vw',
   height: '100vh',
-  zIndex: 5,
+  zIndex: 3,
   position: 'fixed',
   backgroundColor: 'rgba(0,0,0,0.7)',
   top: 0,
