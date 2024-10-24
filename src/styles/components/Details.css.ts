@@ -8,3 +8,15 @@ export const detailsStyles = style({
   justifyContent: 'center',
   alignItems: 'center',
 });
+
+export const titleStyles = style({
+  paddingBottom: '20px',
+  fontSize: '66px',
+  fontWeight: '800',
+});
+
+export const paragraphStyles = style({
+  whiteSpace: 'pre-line',
+  paddingBottom: '10px',
+  fontSize: '23px',
+});
