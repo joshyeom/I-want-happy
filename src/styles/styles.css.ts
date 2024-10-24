@@ -7,8 +7,6 @@ export const mainStyle = style({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
-  padding: '20px',
-  paddingLeft: '40px',
 });
 
 export const sectionStyle = style({
@@ -18,20 +16,25 @@ export const sectionStyle = style({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'flex-start',
-  paddingBottom: '88px',
+  gap: '24px',
+  paddingLeft: '71px',
+  paddingBottom: '74px',
 });
 
 export const buttonStyle = style({
-  borderRadius: '100px',
+  borderRadius: '138px',
+  height: '116px',
+  display: 'flex',
+  alignItems: 'center',
   color: '#000000',
+  fontFamily: 'Poppins, sans-serif',
   fontSize: '100px',
-  fontWeight: 700,
-  lineHeight: '95px',
-  textTransform: 'none',
+  fontStyle: 'normal',
+  fontWeight: '1000',
   backgroundColor: 'white',
   border: 'none',
   transition: 'background 0.2s ease, color 0.2s ease',
-  padding: '0 30px 7px 30px',
+  padding: '0 36px',
   ':hover': {
     backgroundColor: '#0b00ff',
     color: '#ffffff',
