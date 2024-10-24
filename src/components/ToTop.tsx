@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { toTopStyle } from "../styles/styles.css"
+import { toTopStyle } from "../styles/components/ToTop.css"
 
 const ToTop = () => {
     const [isHovered, setIsHovered] = useState(false);

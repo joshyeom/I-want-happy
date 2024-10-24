@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { cardHoverStyle, cardHoverVisibleStyle, cardStyle } from "../styles/styles.css"
+import { cardHoverStyle, cardHoverVisibleStyle, cardStyle } from "../styles/components/Card.css"
 
 const Card = ({ url, idx, alt, openModal}: { url: string , idx: number, alt: string, openModal: (url: string) => void}) => {
     const [isHovered, setIsHovered] = useState(false)
