@@ -4,8 +4,7 @@ import { useState } from "react";
 import OneModal from "../components/OneModal";
 import { useFetchMultipleImages } from "../hooks/useFetchMultipleImages";
 import MiniCard from "../components/MiniCard";
-import { cardContainerStyle, mainStyle, sectionStyle, titleBoxStyle, titleStyle } from "../styles/AllPage.css";
-
+import { cardContainerStyle, mainStyle, sectionStyle, titleBoxStyle, titleStyle } from "../styles/pages/All.css";
 const All = () => {
     const { url } = useParams<{ url: string}>();
     const queries = useFetchMultipleImages(url === '1-100' ? ['happy','resized-happy'] : ['withlove','resized-withlove'])

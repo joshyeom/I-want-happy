@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import { CSSProperties, useState } from "react"
-import { allButtons, headerStyle } from "../styles/Header.css"
+import { allButtons, headerStyle } from "../styles/components/Header.css"
 
 const Header = ({style, currentPage}: {style?: CSSProperties, currentPage: string}) => {
     const navigate = useNavigate()
