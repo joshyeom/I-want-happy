@@ -1,25 +1,29 @@
 import { style } from '@vanilla-extract/css';
 
 export const mainStyle = style({
+  overflow: 'hidden',
   display: 'flex',
   height: '100vh',
-  justifyContent: 'space-around',
+  justifyContent: 'space-between',
 });
 
 export const titleBoxStyle = style({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'flex-end',
-  width: '600px',
+  lineHeight: '1',
 });
 
 export const titleStyle = style({
-  fontSize: '200px',
+  whiteSpace: 'pre-line',
+  fontSize: '268px',
+  fontWeight: '600',
 });
 
 export const sectionStyle = style({
   display: 'flex',
   alignItems: 'center',
+  padding: '45px',
 });
 
 export const cardContainerStyle = style({

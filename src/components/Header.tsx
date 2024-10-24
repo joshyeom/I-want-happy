@@ -29,7 +29,7 @@ const Header = ({style, currentPage}: {style?: CSSProperties, currentPage: strin
                 >
                     <button style={handleButtonColor('1-100')} onClick={() => navigate('/all/1-100')}>1-100</button>
                     <button style={handleButtonColor('100-200')} onClick={() => navigate('/all/100-200')}>100-200</button>
-                    <button style={handleButtonColor('300-400')} onClick={() => navigate('/all/300-400')}>300-400</button>
+                    <button style={handleButtonColor('300-400')} onClick={() => navigate('/all/200-300')}>200-300</button>
                 </div>
             </section>
         </header>

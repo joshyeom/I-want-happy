@@ -23,7 +23,7 @@ const ToDown =({style, setIsDown}: {style?: CSSProperties, setIsDown: (state: bo
     const handleClick = () => {
         setIsDown(true)
         window.scrollTo({
-          top: 934,
+          top: 830,
           behavior: 'smooth',
         });
       };
