@@ -5,6 +5,7 @@ import OneModal from "../components/OneModal";
 import { useFetchMultipleImages } from "../hooks/useFetchMultipleImages";
 import MiniCard from "../components/MiniCard";
 import { cardContainerStyle, mainStyle, sectionStyle, titleBoxStyle, titleStyle } from "../styles/pages/All.css";
+import { urlTrans } from "../utils/urlTrans";
 const All = () => {
     const { url } = useParams<{ url: string}>();
     const queries = useFetchMultipleImages(url === '1-100' ? ['happy','resized-happy'] : ['withlove','resized-withlove'])
@@ -31,13 +32,13 @@ const All = () => {
 
     const originImages = queries[0]?. data || [];
     const resizedImages = queries[1]?.data || [];
-
+    
     return(
         <>
-            <Header currentPage={url}/>
+            <Header currentPage={url} style={{width: '50%'}}/>
             <main className={mainStyle}>
                 <section className={titleBoxStyle}>
-                    <h1 className={titleStyle}>{url}</h1>
+                    <h1 className={titleStyle}>{urlTrans(url)}</h1>
                 </section>
                 <section className={sectionStyle}>
                     <section className={cardContainerStyle}>
