@@ -1,13 +1,14 @@
 import Header from "../components/Header"
 import Card from "../components/Card"
 import ToTop from "../components/ToTop"
-import { gridMainStyle } from "../styles/styles.css"
+import { gridSectionStyle, mainStyle } from "../styles/pages/Posts.css"
 import TwoModal from "../components/TwoModal"
 import { useState } from "react"
 import { useParams } from "react-router-dom"
 import { fetchDetails } from "../utils/fetchDetails"
 import { Details } from "../components/Details"
 import { useFetchMultipleImages } from "../hooks/useFetchMultipleImages"
+import ToDown from "../components/ToDown"
 
 const Posts = () => {
   const { theme } = useParams()
@@ -15,7 +16,7 @@ const Posts = () => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [selectedImgUrl, setSelectedImgUrl] = useState<string | null>(null);
   const [selectedKakaoUrl, setSelectedKakaoUrl] = useState<string | null>(null);
-
+  const [isDowned, setIsDowned] = useState<boolean>(false)
 
   const openModal = (imageUrl: string, kakaoUrl: string) => {
     setSelectedImgUrl(imageUrl); 
@@ -43,19 +44,20 @@ const Posts = () => {
   const details = fetchDetails(theme)
 
     return(
-        <div style={{overflow: "hidden", position: "relative"}}>
+        <main className={mainStyle}>
             <Header currentPage={theme!}/>
             <ToTop/>
+            <ToDown style={{display: isDowned ? 'none' : 'block'}} setIsDown={setIsDowned}/>
             <Details details={details}/>
-            <main className={gridMainStyle}>
+            <section className={gridSectionStyle}>
                 {
                   images?.map((v, i) => <Card url={v} alt={`Happy Image ${i}`} idx={i} key={v} openModal={() => openModal(v, kakaoImages[i])}/>)
                 }
-            </main>
+            </section>
             {isModalOpen && selectedImgUrl && selectedKakaoUrl && (
               <TwoModal onClose={closeModal} imgUrl={selectedImgUrl} kakaoUrl={selectedKakaoUrl}/>
             )}
-        </div>
+        </main>
     )
 }
 

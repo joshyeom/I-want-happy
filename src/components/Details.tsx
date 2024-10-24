@@ -1,4 +1,4 @@
-import { detailsStyles } from "../styles/styles.css";
+import { detailsStyles, paragraphStyles, titleStyle } from "../styles/components/Details.css";
 
 interface DetailsProps {
     details: {
@@ -10,9 +10,9 @@ interface DetailsProps {
 export const Details = ({details}: DetailsProps) => {
     return(
         <section className={detailsStyles}>
-            <h1 style={{paddingBottom: '6px', fontSize: '66px', fontWeight: 'bold'}}>{ details?.title }</h1>
-            <p style={{whiteSpace: 'pre-line'}}>{ details?.first }</p>
-            <p style={{whiteSpace: 'pre-line'}}>{ details?.second }</p>
+            <h1 className={titleStyle}>{ details?.title }</h1>
+            <p className={paragraphStyles} style={{paddingBottom: '10px'}}>{ details?.first }</p>
+            <p className={paragraphStyles}>{ details?.second }</p>
         </section>
     )
 }

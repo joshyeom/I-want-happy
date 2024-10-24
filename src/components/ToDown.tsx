@@ -1,20 +1,38 @@
-import { useState } from "react";
-import { toTopStyle } from "../styles/components/ToTop.css"
+import { CSSProperties, useEffect } from "react";
+import { toDownStyle } from "../styles/components/ToDown.css";
 
-const ToTop = () => {
-    const [isHovered, setIsHovered] = useState(false);
+const ToDown =({style, setIsDown}: {style?: CSSProperties, setIsDown: (state: boolean) => void}) => {
+    // const [isHovered, setIsHovered] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY === 0) {
+                setIsDown(false);
+            } else {
+                setIsDown(true)
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [setIsDown]); 
 
     const handleClick = () => {
+        setIsDown(true)
         window.scrollTo({
-          top: 0,
+          top: 934,
           behavior: 'smooth',
         });
       };
 
     return(
-        <button className={toTopStyle}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+        <button className={toDownStyle}
+            style={{...style}}
+            // onMouseEnter={() => setIsHovered(true)}
+            // onMouseLeave={() => setIsHovered(false)}
             onClick={handleClick}
             >
              <svg
@@ -27,9 +45,9 @@ const ToTop = () => {
                     viewBox="0 0 26 26"
                     xmlSpace="preserve"
                     style={{
-                        fill: '#000',
+                        fill: '#fff',
                         height: '24px',
-                        opacity: isHovered ? '0.5' : '0.3',
+                        // opacity: isHovered ? '0.5' : '0.5',
                         width: '24px',
                     }}
                 >
@@ -49,4 +67,4 @@ const ToTop = () => {
     )
 }
 
-export default ToTop
+export default ToDown
