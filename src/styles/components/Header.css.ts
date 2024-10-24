@@ -1,12 +1,14 @@
 import { style } from '@vanilla-extract/css';
 
 export const headerStyle = style({
+  width: '100vw',
   backgroundColor: 'white',
   fontSize: '21px',
-  position: 'absolute',
+  position: 'fixed',
   display: 'flex',
   alignItems: 'center',
   padding: '65px 51px',
+  zIndex: 10,
 });
 
 export const allButtons = style({
