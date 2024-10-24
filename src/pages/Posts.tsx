@@ -1,7 +1,7 @@
 import Header from "../components/Header"
 import Card from "../components/Card"
 import ToTop from "../components/ToTop"
-import { gridMainStyle } from "../styles/styles.css"
+import { gridSectionStyle, mainStyle } from "../styles/pages/Posts.css"
 import TwoModal from "../components/TwoModal"
 import { useState } from "react"
 import { useParams } from "react-router-dom"
@@ -43,19 +43,19 @@ const Posts = () => {
   const details = fetchDetails(theme)
 
     return(
-        <div style={{overflow: "hidden", position: "relative"}}>
+        <main className={mainStyle}>
             <Header currentPage={theme!}/>
             <ToTop/>
             <Details details={details}/>
-            <main className={gridMainStyle}>
+            <section className={gridSectionStyle}>
                 {
                   images?.map((v, i) => <Card url={v} alt={`Happy Image ${i}`} idx={i} key={v} openModal={() => openModal(v, kakaoImages[i])}/>)
                 }
-            </main>
+            </section>
             {isModalOpen && selectedImgUrl && selectedKakaoUrl && (
               <TwoModal onClose={closeModal} imgUrl={selectedImgUrl} kakaoUrl={selectedKakaoUrl}/>
             )}
-        </div>
+        </main>
     )
 }
 
