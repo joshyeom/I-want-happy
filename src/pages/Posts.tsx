@@ -8,6 +8,7 @@ import { useParams } from "react-router-dom"
 import { fetchDetails } from "../utils/fetchDetails"
 import { Details } from "../components/Details"
 import { useFetchMultipleImages } from "../hooks/useFetchMultipleImages"
+import ToDown from "../components/ToDown"
 
 const Posts = () => {
   const { theme } = useParams()
@@ -15,7 +16,7 @@ const Posts = () => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [selectedImgUrl, setSelectedImgUrl] = useState<string | null>(null);
   const [selectedKakaoUrl, setSelectedKakaoUrl] = useState<string | null>(null);
-
+  const [isDowned, setIsDowned] = useState<boolean>(false)
 
   const openModal = (imageUrl: string, kakaoUrl: string) => {
     setSelectedImgUrl(imageUrl); 
@@ -46,6 +47,7 @@ const Posts = () => {
         <main className={mainStyle}>
             <Header currentPage={theme!}/>
             <ToTop/>
+            <ToDown style={{display: isDowned ? 'none' : 'block'}} setIsDown={setIsDowned}/>
             <Details details={details}/>
             <section className={gridSectionStyle}>
                 {
