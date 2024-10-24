@@ -9,7 +9,7 @@ export const detailsStyles = style({
   alignItems: 'center',
 });
 
-export const titleStyles = style({
+export const titleStyle = style({
   paddingBottom: '20px',
   fontSize: '66px',
   fontWeight: '800',
