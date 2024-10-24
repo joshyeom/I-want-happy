@@ -46,16 +46,11 @@ export const buttonStyle = style({
 
 export const headerStyle = style({
   backgroundColor: 'white',
+  fontSize: '21px',
   position: 'absolute',
   display: 'flex',
   alignItems: 'center',
   padding: '65px 51px',
-  height: '162px',
-  width: '100%',
-});
-
-export const headerButtonStyle = style({
-  paddingRight: '20px',
 });
 
 export const gridMainStyle = style({
