@@ -4,14 +4,15 @@ import { useState } from "react";
 import OneModal from "../components/OneModal";
 import { useFetchMultipleImages } from "../hooks/useFetchMultipleImages";
 import MiniCard from "../components/MiniCard";
+import { cardContainerStyle, mainStyle, sectionStyle, titleBoxStyle, titleStyle } from "../styles/AllPage.css";
 
 const All = () => {
     const { url } = useParams<{ url: string}>();
     const queries = useFetchMultipleImages(url === '1-100' ? ['happy','resized-happy'] : ['withlove','resized-withlove'])
-
-
     const [isModalOpen, setModalOpen] = useState(false);
     const [selectedImgUrl, setSelectedImgUrl] = useState<string | null>(null);
+
+    if(!url) return
 
     const openModal = (url: string) => {
         setSelectedImgUrl(url); 
@@ -34,20 +35,13 @@ const All = () => {
 
     return(
         <>
-            <Header currentPage={url!}/>
-            <main style={{display: 'flex', height: '100vh', justifyContent: 'space-around'}}>
-                <section style={{display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', width: '600px'}}>
-                    <span style={{fontSize: '200px'}}>{url}</span>
+            <Header currentPage={url}/>
+            <main className={mainStyle}>
+                <section className={titleBoxStyle}>
+                    <h1 className={titleStyle}>{url}</h1>
                 </section>
-                <section style={{display: 'flex', alignItems: 'center'}}>
-                    <section style={{
-                        width: '600px',
-                        height: '95vh',
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(10, 1fr)',
-                        gridAutoRows: '2fr',
-                        gap: '10px'     
-                    }}>
+                <section className={sectionStyle}>
+                    <section className={cardContainerStyle}>
                 {
                 // data가 100개가 되도록 하기 위해 필요한 대체 이미지의 수를 계산
                     Array.from({ length: 100 }).map((_, i) => {
