@@ -17,7 +17,8 @@ export const titleBoxStyle = style({
 export const titleStyle = style({
   whiteSpace: 'pre-line',
   fontSize: '268px',
-  fontWeight: '600',
+  fontWeight: '700',
+  paddingLeft: '51px',
 });
 
 export const sectionStyle = style({
