@@ -16,6 +16,6 @@ export const allButtons = style({
   gap: '24px',
   position: 'absolute',
   height: '130px',
-  right: '-45%',
+  right: '-45.5%',
   zIndex: 10,
 });
