@@ -3,12 +3,21 @@ import { detailsStyles, paragraphStyles, titleStyle } from "../styles/components
 export const Details = ({details}: {details: string[]}) => {
     return(
         <section className={detailsStyles}>
-            <div style={{height: '133px', paddingBottom: '28px'}}>
+            <div style={{height: '133px', display: 'flex', alignItems: 'center', paddingBottom: '41px'}}>
                 <h1 className={titleStyle}>{ details ? details[0] : null }</h1>
             </div>
-            {details ? details.slice(1, details.length).map((detail) => (
-                <p className={paragraphStyles} style={{paddingBottom: '10px'}}>{ detail }</p>
-            )): null}
+            <div style={{
+                display: 'flex',
+                width: '972px',
+                height: '170px',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+            }}>
+                {details ? details.slice(1, details.length).map((detail) => (
+                    <p className={paragraphStyles}>{ detail }</p>
+                )): null}
+            </div>
         </section>
     )
 }

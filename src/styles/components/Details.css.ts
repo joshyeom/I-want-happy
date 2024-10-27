@@ -10,7 +10,6 @@ export const detailsStyles = style({
 });
 
 export const titleStyle = style({
-  paddingBottom: '28px',
   fontSize: '66px',
   fontWeight: '800',
 
@@ -29,7 +28,8 @@ export const titleStyle = style({
 
 export const paragraphStyles = style({
   whiteSpace: 'pre-line',
-  paddingBottom: '10px',
+  fontWeight: '400',
+  lineHeight: '40px',
   fontSize: '23px',
   '@media': {
     'screen and (max-width: 1921px)': {
