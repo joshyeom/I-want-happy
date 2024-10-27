@@ -9,6 +9,16 @@ export const headerStyle = style({
   alignItems: 'center',
   padding: '65px 51px',
   zIndex: 10,
+  '@media': {
+    'screen and (max-width: 1921px)': {
+      fontSize: '21px',
+      padding: '65px 51px',
+    },
+    'screen and (max-width: 376px)': {
+      fontSize: '11px',
+      padding: '29px 31px',
+    },
+  },
 });
 
 export const allButtons = style({
