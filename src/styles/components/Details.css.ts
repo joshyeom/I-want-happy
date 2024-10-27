@@ -9,14 +9,53 @@ export const detailsStyles = style({
   alignItems: 'center',
 });
 
-export const titleStyle = style({
-  paddingBottom: '20px',
-  fontSize: '66px',
+export const titleBoxStyle = style({
   fontWeight: '800',
+  display: 'flex',
+  alignItems: 'center',
+  '@media': {
+    'screen and (max-width: 1920px)': {
+      fontSize: '66px',
+      height: '133px',
+      paddingBottom: '41px',
+    },
+    'screen and (max-width: 1023px)': {
+      fontSize: '54px',
+      height: '133px',
+      paddingBottom: '28px',
+    },
+    'screen and (max-width: 376px)': {
+      fontSize: '18px',
+      height: '74px',
+      paddingBottom: '20px',
+    },
+  },
 });
 
-export const paragraphStyles = style({
-  whiteSpace: 'pre-line',
-  paddingBottom: '10px',
-  fontSize: '23px',
+export const paragraphBoxStyle = style({
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  fontWeight: '400',
+  '@media': {
+    'screen and (max-width: 1920px)': {
+      height: '170px',
+      width: '972px',
+      fontSize: '23px',
+      lineHeight: '40px',
+    },
+    'screen and (max-width: 1025px)': {
+      width: '885px',
+      height: '172px',
+      fontSize: '21px',
+      lineHeight: '40px',
+    },
+    'screen and (max-width: 376px)': {
+      width: '346px',
+      height: '90px',
+      lineHeight: '18px',
+      fontSize: '10px',
+    },
+  },
 });

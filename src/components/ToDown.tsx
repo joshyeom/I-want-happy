@@ -21,11 +21,23 @@ const ToDown =({style, setIsDown}: {style?: CSSProperties, setIsDown: (state: bo
     }, [setIsDown]); 
 
     const handleClick = () => {
-        setIsDown(true)
+        setIsDown(true);
+    
+        let scrollToPosition;
+
+
+        if (window.innerWidth <= 376) {
+            scrollToPosition = 900; 
+        } else if (window.innerWidth < 1023) {
+            scrollToPosition = 914; 
+        } else if (window.innerWidth <= 1920) {
+          scrollToPosition = 1075; 
+        }
+
         window.scrollTo({
-          top: 830,
-          behavior: 'smooth',
-        });
+            top: scrollToPosition,
+            behavior: 'smooth',
+          });
       };
 
     return(
@@ -45,7 +57,7 @@ const ToDown =({style, setIsDown}: {style?: CSSProperties, setIsDown: (state: bo
                     viewBox="0 0 26 26"
                     xmlSpace="preserve"
                     style={{
-                        fill: '#fff',
+                        fill: '#000000',
                         height: '24px',
                         // opacity: isHovered ? '0.5' : '0.5',
                         width: '24px',

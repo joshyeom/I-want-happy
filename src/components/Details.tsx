@@ -1,18 +1,16 @@
-import { detailsStyles, paragraphStyles, titleStyle } from "../styles/components/Details.css";
+import { detailsStyles, paragraphBoxStyle, titleBoxStyle } from "../styles/components/Details.css";
 
-interface DetailsProps {
-    details: {
-        title: string;
-        first: string;
-        second: string;
-    };
-}
-export const Details = ({details}: DetailsProps) => {
+export const Details = ({details}: {details: string[]}) => {
     return(
         <section className={detailsStyles}>
-            <h1 className={titleStyle}>{ details?.title }</h1>
-            <p className={paragraphStyles} style={{paddingBottom: '10px'}}>{ details?.first }</p>
-            <p className={paragraphStyles}>{ details?.second }</p>
+            <div className={titleBoxStyle}>
+                <span>{ details ? details[0] : null }</span>
+            </div>
+            <div className={paragraphBoxStyle}>
+                {details ? details.slice(1, details.length).map((detail) => (
+                    <p style={{whiteSpace: 'pre-line',}}>{ detail }</p>
+                )): null}
+            </div>
         </section>
     )
 }

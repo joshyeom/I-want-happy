@@ -2,8 +2,8 @@ import { style } from '@vanilla-extract/css';
 
 export const cardStyle = style({
   position: 'relative',
-  width: '19.45%',
-  height: '345.61px',
+  width: '100%',
+  height: '456px',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -13,8 +13,8 @@ export const cardStyle = style({
 
 export const cardHoverStyle = style({
   position: 'absolute',
-  height: '200px',
-  width: '150.6px',
+  width: '219px',
+  height: '310px',
   backgroundColor: 'rgba(34, 34, 34, 0.8)',
   display: 'flex',
   flexDirection: 'column',
