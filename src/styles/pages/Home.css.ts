@@ -17,29 +17,60 @@ export const sectionStyle = style({
   justifyContent: 'center',
   alignItems: 'flex-start',
   gap: '24px',
-  paddingLeft: '71px',
   paddingBottom: '74px',
+  '@media': {
+    'screen and (max-width: 1920px)': {
+      paddingLeft: '71px',
+      justifyContent: 'center',
+    },
+    'screen and (max-width: 1023px)': {
+      paddingLeft: '71px',
+      justifyContent: 'center',
+    },
+    'screen and (max-width: 376px)': {
+      paddingLeft: '39px',
+      paddingTop: '67px',
+      justifyContent: 'flex-start',
+    },
+  },
 });
 
 export const buttonStyle = style({
   borderRadius: '138px',
-  height: '116px',
   display: 'flex',
   alignItems: 'center',
   color: '#000000',
   fontFamily: 'Poppins, sans-serif',
-  fontSize: '100px',
   fontStyle: 'normal',
   fontWeight: '1000',
   backgroundColor: 'white',
   border: 'none',
   transition: 'background 0.2s ease, color 0.2s ease',
-  padding: '0 36px',
   ':hover': {
     backgroundColor: '#0b00ff',
     color: '#ffffff',
   },
   ':focus': {
     outline: 'none',
+  },
+  '@media': {
+    'screen and (max-width: 1920px)': {
+      fontSize: '100px',
+      lineHeight: 'normal',
+      padding: '17px 36px',
+      height: '116px',
+    },
+    'screen and (max-width: 1023px)': {
+      fontSize: '100px',
+      lineHeight: 'normal',
+      padding: '8px 33px',
+      height: '116px',
+    },
+    'screen and (max-width: 376px)': {
+      fontSize: '32px',
+      lineHeight: '40px',
+      padding: '8px 16px',
+      height: '40px',
+    },
   },
 });
