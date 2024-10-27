@@ -1,14 +1,14 @@
 import { style } from '@vanilla-extract/css';
 
 export const toDownStyle = style({
-  background: 'black',
+  background: 'white',
   borderRadius: '60px',
   height: '60px',
   width: '60px',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  bottom: '138px',
+  bottom: '100px',
   left: '50%',
   position: 'fixed',
   zIndex: 3,

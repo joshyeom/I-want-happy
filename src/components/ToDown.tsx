@@ -45,7 +45,7 @@ const ToDown =({style, setIsDown}: {style?: CSSProperties, setIsDown: (state: bo
                     viewBox="0 0 26 26"
                     xmlSpace="preserve"
                     style={{
-                        fill: '#fff',
+                        fill: '#000000',
                         height: '24px',
                         // opacity: isHovered ? '0.5' : '0.5',
                         width: '24px',
