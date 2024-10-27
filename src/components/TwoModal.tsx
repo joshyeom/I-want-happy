@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { ModalContentsStyle, ModalStyle } from '../styles/components/Modal.css';
+import { ModalContentsStyle, ModalImageStyle, ModalStyle } from '../styles/components/Modal.css';
 import Skeleton from './Skeleton';
 
 const TwoModal = ({ onClose, imgUrl, kakaoUrl }: {onClose: () => void, imgUrl: string, kakaoUrl: string}) => {
@@ -21,13 +21,13 @@ const TwoModal = ({ onClose, imgUrl, kakaoUrl }: {onClose: () => void, imgUrl: s
                 {!imgLoaded && (
                     <Skeleton/>
                 )}
-                    <img src={imgUrl} alt="Modal Content" onLoad={() => setImgLoaded(true)} style={{width: '591.3px', height: '837px'}}/>
+                    <img src={imgUrl} alt="Modal Content" onLoad={() => setImgLoaded(true)} className={ModalImageStyle}/>
             </div>
             <div className={ModalContentsStyle}>
                 {!kakaoLoaded && (
                     <Skeleton/>
                 )}
-                    <img src={kakaoUrl} alt="Kakao Content" onLoad={() => setKakaoLoaded(true)} style={{width: '615.16px', height: '837px'}}/>
+                    <img src={kakaoUrl} alt="Kakao Content" onLoad={() => setKakaoLoaded(true)} className={ModalImageStyle}/>
             </div>
         </div>,
         document.body

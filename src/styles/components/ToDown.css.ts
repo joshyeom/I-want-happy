@@ -8,7 +8,6 @@ export const toDownStyle = style({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-
   left: '50%',
   position: 'fixed',
   zIndex: 3,
@@ -22,7 +21,7 @@ export const toDownStyle = style({
       bottom: '249px',
     },
     'screen and (max-width: 1023px)': {
-      bottom: '398px',
+      bottom: '200px',
     },
     'screen and (max-width: 376px)': {
       bottom: '136px',
