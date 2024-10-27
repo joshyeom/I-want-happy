@@ -41,7 +41,7 @@ const Posts = () => {
   const images = queries[0]?. data || [];
   const kakaoImages = queries[1]?.data || [];
 
-  const details = fetchDetails(theme)
+  const details = fetchDetails(theme) as string[]
 
     return(
         <main className={mainStyle}>
@@ -51,7 +51,7 @@ const Posts = () => {
             <Details details={details}/>
             <section className={gridSectionStyle}>
                 {
-                  images?.map((v, i) => <Card url={v} alt={`Happy Image ${i}`} idx={i} key={v} openModal={() => openModal(v, kakaoImages[i])}/>)
+                  images?.map((v, i) => <Card url={v} alt={`Image ${i}`} idx={i} key={v} openModal={() => openModal(v, kakaoImages[i])}/>)
                 }
             </section>
             {isModalOpen && selectedImgUrl && selectedKakaoUrl && (
