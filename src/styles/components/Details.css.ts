@@ -10,7 +10,7 @@ export const detailsStyles = style({
 });
 
 export const titleStyle = style({
-  paddingBottom: '20px',
+  paddingBottom: '28px',
   fontSize: '66px',
   fontWeight: '800',
 });
