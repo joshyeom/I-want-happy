@@ -10,7 +10,7 @@ export const headerStyle = style({
   padding: '65px 51px',
   zIndex: 10,
   '@media': {
-    'screen and (max-width: 1921px)': {
+    'screen and (max-width: 1920px)': {
       fontSize: '21px',
       padding: '65px 51px',
     },

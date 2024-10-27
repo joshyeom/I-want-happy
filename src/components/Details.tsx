@@ -1,21 +1,14 @@
-import { detailsStyles, paragraphStyles, titleStyle } from "../styles/components/Details.css";
+import { detailsStyles, paragraphBoxStyle, titleBoxStyle } from "../styles/components/Details.css";
 
 export const Details = ({details}: {details: string[]}) => {
     return(
         <section className={detailsStyles}>
-            <div style={{height: '133px', display: 'flex', alignItems: 'center', paddingBottom: '41px'}}>
-                <h1 className={titleStyle}>{ details ? details[0] : null }</h1>
+            <div className={titleBoxStyle}>
+                <span>{ details ? details[0] : null }</span>
             </div>
-            <div style={{
-                display: 'flex',
-                width: '972px',
-                height: '170px',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-            }}>
+            <div className={paragraphBoxStyle}>
                 {details ? details.slice(1, details.length).map((detail) => (
-                    <p className={paragraphStyles}>{ detail }</p>
+                    <p style={{whiteSpace: 'pre-line',}}>{ detail }</p>
                 )): null}
             </div>
         </section>
