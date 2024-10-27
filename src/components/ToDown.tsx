@@ -21,11 +21,23 @@ const ToDown =({style, setIsDown}: {style?: CSSProperties, setIsDown: (state: bo
     }, [setIsDown]); 
 
     const handleClick = () => {
-        setIsDown(true)
+        setIsDown(true);
+    
+        let scrollToPosition;
+
+
+        if (window.innerWidth <= 376) {
+            scrollToPosition = 900; 
+        } else if (window.innerWidth < 1023) {
+            scrollToPosition = 914; 
+        } else if (window.innerWidth <= 1920) {
+          scrollToPosition = 874; 
+        }
+
         window.scrollTo({
-          top: 830,
-          behavior: 'smooth',
-        });
+            top: scrollToPosition,
+            behavior: 'smooth',
+          });
       };
 
     return(

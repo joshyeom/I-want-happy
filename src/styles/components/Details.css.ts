@@ -17,7 +17,7 @@ export const titleStyle = style({
     'screen and (max-width: 1920px)': {
       fontSize: '66px',
     },
-    'screen and (max-width: 1024px)': {
+    'screen and (max-width: 1023px)': {
       fontSize: '54px',
     },
     'screen and (max-width: 376px)': {
