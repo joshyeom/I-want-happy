@@ -29,3 +29,31 @@ export const allButtons = style({
   right: '-45.5%',
   zIndex: 10,
 });
+
+export const allHeaderStyle = style({
+  width: '100vw',
+  backgroundColor: 'white',
+  fontSize: '21px',
+  position: 'fixed',
+  display: 'flex',
+  alignItems: 'center',
+  padding: '65px 51px',
+  zIndex: 10,
+  '@media': {
+    'screen and (max-width: 1920px)': {
+      width: '50vw',
+      fontSize: '21px',
+      padding: '65px 51px',
+    },
+    'screen and (max-width: 1025px)': {
+      width: '100vw',
+      fontSize: '21px',
+      padding: '65px 51px',
+    },
+    'screen and (max-width: 500px)': {
+      width: '100vw',
+      fontSize: '11px',
+      padding: '29px 31px',
+    },
+  },
+});
