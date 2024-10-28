@@ -47,3 +47,20 @@ export const ModalImageStyle = style({
     },
   },
 });
+
+export const oneModalImageStyle = style({
+  '@media': {
+    'screen and (max-width: 1920px)': {
+      width: '595px',
+      height: '842px',
+    },
+    'screen and (max-width: 1025px)': {
+      width: '595px',
+      height: '842px',
+    },
+    'screen and (max-width: 500px)': {
+      width: '343px',
+      height: '487px',
+    },
+  },
+});

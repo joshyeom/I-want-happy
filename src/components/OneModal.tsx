@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { ModalContentsStyle, ModalStyle } from '../styles/components/Modal.css';
+import { ModalContentsStyle, ModalImageStyle, ModalStyle } from '../styles/components/Modal.css';
 import Skeleton from './Skeleton';
 
 const OneModal = ({ onClose, imgUrl }: {onClose: () => void, imgUrl: string}) => {
@@ -21,7 +21,7 @@ const OneModal = ({ onClose, imgUrl }: {onClose: () => void, imgUrl: string}) =>
                 {!isLoaded && (
                     <Skeleton/>
                 )}
-                <img src={imgUrl} alt="Modal Content" onLoad={() => setIsLoaded(true)} style={{width: '591.3px', height: '837px'}}/>
+                <img src={imgUrl} alt="Modal Content" onLoad={() => setIsLoaded(true)} className={ModalImageStyle}/>
             </div>
         </div>,
         document.body
