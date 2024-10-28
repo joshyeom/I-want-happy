@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Skeleton from "./Skeleton";
+import { miniCardStyle, miniHoverStyle } from "../styles/components/MiniCard.css";
 
 interface MiniCardProps{
     resizedImage: string; 
@@ -35,33 +36,13 @@ const MiniCard = ({resizedImage, originImage, index, openModal}: MiniCardProps) 
                 src={resizedImage}
                 alt={`Image ${index + 1}`}
                 key={resizedImage}
-                style={{
-                    position: "absolute", // 부모 요소 안에서 절대 위치
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "fill",
-                    display: isLoaded ? "block" : "none", // 로드되기 전까지 숨김
-                    zIndex: 1, // 스켈레톤 뒤에 배치
-                }}
+                className={miniCardStyle}
+                style={{ display: isLoaded ? "block" : "none" }}
                 onLoad={() => setIsLoaded(true)} // 이미지 로드 후 isLoaded true로 변경
             />
     
             {/* 오버레이 효과 */}
-            <div
-                style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                    backgroundColor: "black",
-                    opacity: isHover ? 0.8 : 0,
-                    transition: "0.2s ease",
-                    zIndex: 3, // 오버레이는 스켈레톤 및 이미지 위에 표시
-                }}
-            ></div>
+            <div className={miniHoverStyle} key={resizedImage} style={{opacity: isHover ? 0.8 : 0,}}></div>
         </button>
     );
     

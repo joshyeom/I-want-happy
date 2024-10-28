@@ -8,7 +8,7 @@ import { cardContainerStyle, mainStyle, sectionStyle, titleBoxStyle, titleStyle 
 import { urlTrans } from "../utils/urlTrans";
 const All = () => {
     const { url } = useParams<{ url: string}>();
-    const queries = useFetchMultipleImages(url === '1-100' ? ['happy','resized-happy'] : ['withlove','resized-withlove'])
+    const queries = useFetchMultipleImages(url === '1-100' ? ['happy','resized-happy'] : ['love','resized-love'])
     const [isModalOpen, setModalOpen] = useState(false);
     const [selectedImgUrl, setSelectedImgUrl] = useState<string | null>(null);
 
@@ -35,7 +35,7 @@ const All = () => {
     
     return(
         <>
-            <Header currentPage={url} style={{width: '50%'}}/>
+            <Header currentPage={url}/>
             <main className={mainStyle}>
                 <section className={titleBoxStyle}>
                     <h1 className={titleStyle}>{urlTrans(url)}</h1>

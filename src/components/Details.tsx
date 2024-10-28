@@ -8,7 +8,7 @@ export const Details = ({details}: {details: string[]}) => {
             </div>
             <div className={paragraphBoxStyle}>
                 {details ? details.slice(1, details.length).map((detail) => (
-                    <p style={{whiteSpace: 'pre-line',}}>{ detail }</p>
+                    <p style={{whiteSpace: 'pre-line',}} key={detail}>{ detail }</p>
                 )): null}
             </div>
         </section>

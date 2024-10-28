@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import { CSSProperties, useState } from "react"
-import { allButtons, headerStyle } from "../styles/components/Header.css"
+import { allButtons, headerStyle, allHeaderStyle } from "../styles/components/Header.css"
 
 const Header = ({style, currentPage}: {style?: CSSProperties, currentPage: string}) => {
     const navigate = useNavigate()
@@ -15,7 +15,7 @@ const Header = ({style, currentPage}: {style?: CSSProperties, currentPage: strin
 
 
     return(
-        <header className={headerStyle} style={{...style}}>
+        <header className={currentPage === '1-100' || currentPage === '100-200' ? allHeaderStyle : headerStyle} style={{...style}}>
             <section style={{position: 'relative', display: 'flex', gap: '33px'}}>
                 <button onClick={() => navigate('/')}>YAP! YAP! YAP!</button>
                 <button style={handleButtonColor('happy')} onClick={() => navigate('/happy')}>I WANT HAPPY</button>

@@ -19,7 +19,7 @@ export const ModalStyle = style({
       flexDirection: 'row',
       gap: '27px',
     },
-    'screen and (max-width: 376px)': {
+    'screen and (max-width: 500px)': {
       paddingTop: '95px',
       flexDirection: 'column',
       gap: '14px',
@@ -41,9 +41,26 @@ export const ModalImageStyle = style({
       width: '450px',
       height: '636px',
     },
-    'screen and (max-width: 376px)': {
+    'screen and (max-width: 500px)': {
       width: '265px',
       height: '376px',
+    },
+  },
+});
+
+export const oneModalImageStyle = style({
+  '@media': {
+    'screen and (max-width: 1920px)': {
+      width: '595px',
+      height: '842px',
+    },
+    'screen and (max-width: 1025px)': {
+      width: '595px',
+      height: '842px',
+    },
+    'screen and (max-width: 500px)': {
+      width: '343px',
+      height: '487px',
     },
   },
 });

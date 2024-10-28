@@ -1,10 +1,23 @@
 import { style } from '@vanilla-extract/css';
 
 export const mainStyle = style({
-  overflow: 'hidden',
   display: 'flex',
   height: '100vh',
   justifyContent: 'space-between',
+  '@media': {
+    'screen and (max-width: 1920px)': {
+      overflow: 'hidden',
+      flexDirection: 'row',
+    },
+    'screen and (max-width: 1025px)': {
+      overflowY: 'scroll',
+      flexDirection: 'column',
+    },
+    'screen and (max-width: 500px)': {
+      overflowY: 'scroll',
+      flexDirection: 'column',
+    },
+  },
 });
 
 export const titleBoxStyle = style({
@@ -16,22 +29,61 @@ export const titleBoxStyle = style({
 
 export const titleStyle = style({
   whiteSpace: 'pre-line',
-  fontSize: '268px',
   fontWeight: '700',
-  paddingLeft: '51px',
+  '@media': {
+    'screen and (max-width: 1920px)': {
+      fontSize: '268px',
+      paddingLeft: '51px',
+    },
+    'screen and (max-width: 1025px)': {
+      fontSize: '320px',
+      marginTop: '200px',
+      paddingLeft: '23px',
+    },
+    'screen and (max-width: 500px)': {
+      fontSize: '138px',
+      marginTop: '550px',
+      paddingLeft: '18px',
+    },
+  },
 });
 
 export const sectionStyle = style({
   display: 'flex',
   alignItems: 'center',
-  padding: '45px',
+  '@media': {
+    'screen and (max-width: 1920px)': {
+      padding: '45px',
+    },
+    'screen and (max-width: 1025px)': {
+      padding: '0 30px 13px 30px',
+    },
+    'screen and (max-width: 500px)': {
+      padding: '0 30px 13px 30px',
+      margin: '65px 0 30px 0',
+    },
+  },
 });
 
 export const cardContainerStyle = style({
-  width: '600px',
-  height: '95vh',
   display: 'grid',
   gridTemplateColumns: 'repeat(10, 1fr)',
   gridAutoRows: '2fr',
-  gap: '10px',
+  '@media': {
+    'screen and (max-width: 1920px)': {
+      width: '766px',
+      height: '1009px',
+      gap: '10px',
+    },
+    'screen and (max-width: 1025px)': {
+      width: '964px',
+      height: '1176px',
+      gap: '15px',
+    },
+    'screen and (max-width: 500px)': {
+      width: '346px',
+      height: '628px',
+      gap: '10px',
+    },
+  },
 });
