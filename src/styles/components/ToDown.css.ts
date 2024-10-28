@@ -20,7 +20,7 @@ export const toDownStyle = style({
     'screen and (max-width: 1920px)': {
       bottom: '249px',
     },
-    'screen and (max-width: 1023px)': {
+    'screen and (max-width: 1025px)': {
       bottom: '200px',
     },
     'screen and (max-width: 500px)': {

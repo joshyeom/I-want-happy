@@ -19,7 +19,7 @@ export const titleBoxStyle = style({
       height: '133px',
       paddingBottom: '41px',
     },
-    'screen and (max-width: 1023px)': {
+    'screen and (max-width: 1025px)': {
       fontSize: '54px',
       height: '133px',
       paddingBottom: '28px',
