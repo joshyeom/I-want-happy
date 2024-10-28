@@ -14,7 +14,7 @@ export const headerStyle = style({
       fontSize: '21px',
       padding: '65px 51px',
     },
-    'screen and (max-width: 376px)': {
+    'screen and (max-width: 500px)': {
       fontSize: '11px',
       padding: '29px 31px',
     },

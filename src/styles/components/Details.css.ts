@@ -24,7 +24,7 @@ export const titleBoxStyle = style({
       height: '133px',
       paddingBottom: '28px',
     },
-    'screen and (max-width: 376px)': {
+    'screen and (max-width: 500px)': {
       fontSize: '18px',
       height: '74px',
       paddingBottom: '20px',
@@ -51,7 +51,7 @@ export const paragraphBoxStyle = style({
       fontSize: '21px',
       lineHeight: '40px',
     },
-    'screen and (max-width: 376px)': {
+    'screen and (max-width: 500px)': {
       width: '346px',
       height: '90px',
       lineHeight: '18px',

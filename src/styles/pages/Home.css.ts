@@ -27,7 +27,7 @@ export const sectionStyle = style({
       paddingLeft: '71px',
       justifyContent: 'center',
     },
-    'screen and (max-width: 376px)': {
+    'screen and (max-width: 500px)': {
       paddingLeft: '39px',
       paddingTop: '67px',
       justifyContent: 'flex-start',
@@ -66,7 +66,7 @@ export const buttonStyle = style({
       padding: '8px 33px',
       height: '116px',
     },
-    'screen and (max-width: 376px)': {
+    'screen and (max-width: 500px)': {
       fontSize: '32px',
       lineHeight: '40px',
       padding: '8px 16px',
