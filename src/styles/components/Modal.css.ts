@@ -20,7 +20,6 @@ export const ModalStyle = style({
       gap: '27px',
     },
     'screen and (max-width: 500px)': {
-      paddingTop: '95px',
       flexDirection: 'column',
       gap: '14px',
     },
