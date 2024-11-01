@@ -12,14 +12,19 @@ const Header = ({style, currentPage}: {style?: CSSProperties, currentPage: strin
             : { color: 'black'}
     }
 
+    const handleClick = (path: string): void => {
+        navigate(path);
+        (document.activeElement as HTMLElement)?.blur() 
+    }
+
 
 
     return(
         <header className={currentPage === '1-100' || currentPage === '100-200' ? allHeaderStyle : headerStyle} style={{...style}}>
             <section style={{position: 'relative', display: 'flex', gap: '33px'}}>
-                <button onClick={() => navigate('/')}>YAP! YAP! YAP!</button>
-                <button style={handleButtonColor('happy')} onClick={() => navigate('/happy')}>I WANT HAPPY</button>
-                <button style={handleButtonColor('love')} onClick={() => navigate('/love')}>WITH LOVE</button>
+                <button onClick={() => handleClick('/')}>YAP! YAP! YAP!</button>
+                <button style={handleButtonColor('happy')} onClick={() => handleClick('/happy')}>I WANT HAPPY</button>
+                <button style={handleButtonColor('love')} onClick={() => handleClick('/love')}>WITH LOVE</button>
                 <button onMouseEnter={() => setIsMouseEnter(true)} onMouseLeave={() => setIsMouseEnter(false)} style={{position: 'relative'}}>ALL</button>
                 <div
                     className={allButtons} 
@@ -27,8 +32,8 @@ const Header = ({style, currentPage}: {style?: CSSProperties, currentPage: strin
                     onMouseEnter={() => setIsMouseEnter(true)}
                     onMouseLeave={() => setIsMouseEnter(false)}
                 >
-                    <button style={handleButtonColor('1-100')} onClick={() => navigate('/all/1-100')}>1-100</button>
-                    <button style={handleButtonColor('100-200')} onClick={() => navigate('/all/100-200')}>100-200</button>
+                    <button style={handleButtonColor('1-100')} onClick={() => handleClick('/all/1-100')}>1-100</button>
+                    <button style={handleButtonColor('100-200')} onClick={() => handleClick('/all/100-200')}>100-200</button>
                 </div>
             </section>
         </header>

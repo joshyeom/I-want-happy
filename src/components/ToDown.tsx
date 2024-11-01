@@ -26,10 +26,10 @@ const ToDown =({style, setIsDown}: {style?: CSSProperties, setIsDown: (state: bo
         let scrollToPosition;
 
 
-        if (window.innerWidth <= 376) {
-            scrollToPosition = 1078; 
+        if (window.innerWidth <= 500) {
+            scrollToPosition = 880; 
         } else if (window.innerWidth < 1023) {
-            scrollToPosition = 979; 
+            scrollToPosition = 770; 
         } else if (window.innerWidth <= 2048) {
           scrollToPosition = 1075; 
         }
