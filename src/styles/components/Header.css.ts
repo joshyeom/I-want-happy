@@ -23,11 +23,35 @@ export const headerStyle = style({
 
 export const allButtons = style({
   display: 'flex',
-  gap: '24px',
   position: 'absolute',
   height: '130px',
-  right: '-24%',
   zIndex: 10,
+  '@media': {
+    'screen and (max-width: 2048px)': {
+      gap: '24px',
+      flexDirection: 'row',
+      right: '-24%',
+    },
+    'screen and (max-width: 1025px)': {
+      gap: '24px',
+      flexDirection: 'row',
+    },
+    'screen and (max-width: 500px)': {
+      gap: '12px',
+      flexDirection: 'column',
+      top: '30px',
+      right: '-7.5%',
+    },
+  },
+});
+
+export const rangeButton = style({
+  '@media': {
+    'screen and (max-width: 500px)': {
+      display: 'flex',
+      justifyContent: 'flex-start',
+    },
+  },
 });
 
 export const allHeaderStyle = style({

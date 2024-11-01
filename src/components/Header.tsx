@@ -14,7 +14,6 @@ const Header = ({style, currentPage}: {style?: CSSProperties, currentPage: strin
 
     const handleClick = (path: string): void => {
         navigate(path);
-        (document.activeElement as HTMLElement)?.blur() 
     }
 
 
