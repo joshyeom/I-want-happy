@@ -4,13 +4,14 @@ import { toDownStyle } from "../styles/components/ToDown.css";
 const ToDown =({style, setIsDown}: {style?: CSSProperties, setIsDown: (state: boolean) => void}) => {
     useEffect(() => {
         const handleScroll = () => {
-            console.log(window.scrollY)
             if (window.scrollY === 0) {
                 setIsDown(false);
             } else {
                 setIsDown(true)
             }
         };
+        
+        handleScroll()
 
         window.addEventListener('scroll', handleScroll);
 
