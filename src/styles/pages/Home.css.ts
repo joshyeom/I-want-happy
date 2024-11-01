@@ -19,7 +19,7 @@ export const sectionStyle = style({
   gap: '24px',
   paddingBottom: '74px',
   '@media': {
-    'screen and (max-width: 1920px)': {
+    'screen and (max-width: 2048px)': {
       paddingLeft: '71px',
       justifyContent: 'center',
     },
@@ -54,7 +54,7 @@ export const buttonStyle = style({
     outline: 'none',
   },
   '@media': {
-    'screen and (max-width: 1920px)': {
+    'screen and (max-width: 2048px)': {
       fontSize: '100px',
       lineHeight: 'normal',
       padding: '17px 36px',

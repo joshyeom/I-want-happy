@@ -17,7 +17,7 @@ export const toDownStyle = style({
     backgroundColor: 'rgba(0, 0, 0, 0.2)',
   },
   '@media': {
-    'screen and (max-width: 1920px)': {
+    'screen and (max-width: 2048px)': {
       bottom: '249px',
     },
     'screen and (max-width: 1025px)': {

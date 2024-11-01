@@ -10,7 +10,7 @@ export const headerStyle = style({
   padding: '65px 51px',
   zIndex: 10,
   '@media': {
-    'screen and (max-width: 1920px)': {
+    'screen and (max-width: 2048px)': {
       fontSize: '21px',
       padding: '65px 51px',
     },
@@ -26,7 +26,7 @@ export const allButtons = style({
   gap: '24px',
   position: 'absolute',
   height: '130px',
-  right: '-45.5%',
+  right: '-24%',
   zIndex: 10,
 });
 
@@ -40,7 +40,7 @@ export const allHeaderStyle = style({
   padding: '65px 51px',
   zIndex: 10,
   '@media': {
-    'screen and (max-width: 1920px)': {
+    'screen and (max-width: 2048px)': {
       width: '50vw',
       fontSize: '21px',
       padding: '65px 51px',

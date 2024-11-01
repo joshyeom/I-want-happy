@@ -11,7 +11,7 @@ export const ModalStyle = style({
   justifyContent: 'center',
   alignItems: 'center',
   '@media': {
-    'screen and (max-width: 1920px)': {
+    'screen and (max-width: 2048px)': {
       flexDirection: 'row',
       gap: '93px',
     },
@@ -33,7 +33,7 @@ export const ModalContentsStyle = style({
 
 export const ModalImageStyle = style({
   '@media': {
-    'screen and (max-width: 1920px)': {
+    'screen and (max-width: 2048px)': {
       width: '595px',
       height: '842px',
     },
@@ -50,7 +50,7 @@ export const ModalImageStyle = style({
 
 export const oneModalImageStyle = style({
   '@media': {
-    'screen and (max-width: 1920px)': {
+    'screen and (max-width: 2048px)': {
       width: '595px',
       height: '842px',
     },

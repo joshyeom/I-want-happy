@@ -5,7 +5,7 @@ export const mainStyle = style({
   height: '100vh',
   justifyContent: 'space-between',
   '@media': {
-    'screen and (max-width: 1920px)': {
+    'screen and (max-width: 2048px)': {
       overflow: 'hidden',
       flexDirection: 'row',
     },
@@ -31,7 +31,7 @@ export const titleStyle = style({
   whiteSpace: 'pre-line',
   fontWeight: '700',
   '@media': {
-    'screen and (max-width: 1920px)': {
+    'screen and (max-width: 2048px)': {
       fontSize: '268px',
       paddingLeft: '51px',
     },
@@ -52,7 +52,7 @@ export const sectionStyle = style({
   display: 'flex',
   alignItems: 'center',
   '@media': {
-    'screen and (max-width: 1920px)': {
+    'screen and (max-width: 2048px)': {
       padding: '45px',
     },
     'screen and (max-width: 1025px)': {
@@ -70,7 +70,7 @@ export const cardContainerStyle = style({
   gridTemplateColumns: 'repeat(10, 1fr)',
   gridAutoRows: '2fr',
   '@media': {
-    'screen and (max-width: 1920px)': {
+    'screen and (max-width: 2048px)': {
       width: '766px',
       height: '1009px',
       gap: '10px',
