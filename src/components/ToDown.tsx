@@ -2,10 +2,9 @@ import { CSSProperties, useEffect } from "react";
 import { toDownStyle } from "../styles/components/ToDown.css";
 
 const ToDown =({style, setIsDown}: {style?: CSSProperties, setIsDown: (state: boolean) => void}) => {
-    // const [isHovered, setIsHovered] = useState(false);
-
     useEffect(() => {
         const handleScroll = () => {
+            console.log(window.scrollY)
             if (window.scrollY === 0) {
                 setIsDown(false);
             } else {
@@ -43,8 +42,6 @@ const ToDown =({style, setIsDown}: {style?: CSSProperties, setIsDown: (state: bo
     return(
         <button className={toDownStyle}
             style={{...style}}
-            // onMouseEnter={() => setIsHovered(true)}
-            // onMouseLeave={() => setIsHovered(false)}
             onClick={handleClick}
             >
              <svg
