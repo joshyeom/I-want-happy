@@ -10,6 +10,7 @@ export const ModalStyle = style({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
+  overflowY: 'auto',
   '@media': {
     'screen and (max-width: 2048px)': {
       flexDirection: 'row',
@@ -20,6 +21,7 @@ export const ModalStyle = style({
       gap: '27px',
     },
     'screen and (max-width: 500px)': {
+      paddingTop: '150px',
       flexDirection: 'column',
       gap: '14px',
     },
