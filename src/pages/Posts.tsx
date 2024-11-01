@@ -3,7 +3,7 @@ import Card from "../components/Card"
 import ToTop from "../components/ToTop"
 import { gridSectionStyle, mainStyle } from "../styles/pages/Posts.css"
 import TwoModal from "../components/TwoModal"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { useParams } from "react-router-dom"
 import { fetchDetails } from "../utils/fetchDetails"
 import { Details } from "../components/Details"
@@ -34,10 +34,6 @@ const Posts = () => {
 
   const isLoading = queries.some(query => query.isLoading);
   const hasError = queries.some(query => query.error);
-
-  useEffect(() => {
-    window.scrollY = 0
-  },[theme])
 
   if (isLoading) return <div>Loading...</div>;
   if (hasError) return <div>Error loading images</div>;

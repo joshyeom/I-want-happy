@@ -4,7 +4,7 @@ import './styles/reset.css'
 import Posts from './pages/Posts';
 import All from './pages/All';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-
+import ScrollToTop from './components/ScrollToTop';
 
 const queryClient = new QueryClient()
 
@@ -12,6 +12,7 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <Router>  
+        <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/:theme" element={<Posts/>} />
