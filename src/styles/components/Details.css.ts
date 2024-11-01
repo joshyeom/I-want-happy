@@ -14,7 +14,7 @@ export const titleBoxStyle = style({
   display: 'flex',
   alignItems: 'center',
   '@media': {
-    'screen and (max-width: 1920px)': {
+    'screen and (max-width: 2048px)': {
       fontSize: '66px',
       height: '133px',
       paddingBottom: '41px',
@@ -39,7 +39,7 @@ export const paragraphBoxStyle = style({
   alignItems: 'center',
   fontWeight: '400',
   '@media': {
-    'screen and (max-width: 1920px)': {
+    'screen and (max-width: 2048px)': {
       height: '170px',
       width: '972px',
       fontSize: '23px',

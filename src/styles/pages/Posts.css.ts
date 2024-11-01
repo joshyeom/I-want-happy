@@ -4,7 +4,7 @@ export const gridSectionStyle = style({
   padding: '150px 18px 100px 18px',
   display: 'grid',
   '@media': {
-    'screen and (max-width: 1920px)': {
+    'screen and (max-width: 2048px)': {
       gridTemplateColumns: 'repeat(5, 1fr)',
       gap: '20px',
     },

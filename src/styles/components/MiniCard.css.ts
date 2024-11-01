@@ -7,7 +7,7 @@ export const miniCardStyle = style({
   objectFit: 'fill',
   zIndex: 1, // 스켈레톤 뒤에 배치
   '@media': {
-    'screen and (max-width: 1920px)': {
+    'screen and (max-width: 2048px)': {
       width: '64px',
       height: '91px',
     },
@@ -30,7 +30,7 @@ export const miniHoverStyle = style({
   transition: '0.2s ease',
   zIndex: 3,
   '@media': {
-    'screen and (max-width: 1920px)': {
+    'screen and (max-width: 2048px)': {
       width: '64px',
       height: '91px',
     },

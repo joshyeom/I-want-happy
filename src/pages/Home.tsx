@@ -7,7 +7,7 @@ const Home = () => {
         <main className={mainStyle}>
             <section className={sectionStyle}>
                 <button className={buttonStyle} onClick={() => navigate('/happy')}>I WANT HAPPY</button>
-                <button className={buttonStyle} onClick={() => navigate('/love')} style={{paddingTop: "5px"}}>WITH LOVE</button>
+                <button className={buttonStyle} onClick={() => navigate('/love')}>WITH LOVE</button>
                 <button className={buttonStyle} onClick={() => navigate('/all/1-100')}>ALL</button>
             </section>
         </main>
