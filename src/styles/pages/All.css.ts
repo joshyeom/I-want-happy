@@ -34,6 +34,7 @@ export const titleStyle = style({
     'screen and (max-width: 2048px)': {
       fontSize: '268px',
       paddingLeft: '51px',
+      paddingBottom: '45px',
     },
     'screen and (max-width: 1025px)': {
       fontSize: '320px',
