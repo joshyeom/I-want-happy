@@ -9,7 +9,7 @@ export const mainStyle = style({
       overflow: 'hidden',
       flexDirection: 'row',
     },
-    'screen and (max-width: 1025px)': {
+    'screen and (max-width: 1668px)': {
       overflowY: 'scroll',
       flexDirection: 'column',
     },
@@ -36,7 +36,7 @@ export const titleStyle = style({
       paddingLeft: '51px',
       paddingBottom: '45px',
     },
-    'screen and (max-width: 1025px)': {
+    'screen and (max-width: 1668px)': {
       fontSize: '320px',
       marginTop: '200px',
       paddingLeft: '23px',
@@ -56,7 +56,7 @@ export const sectionStyle = style({
     'screen and (max-width: 2048px)': {
       padding: '45px',
     },
-    'screen and (max-width: 1025px)': {
+    'screen and (max-width: 1668px)': {
       padding: '0 30px 13px 30px',
     },
     'screen and (max-width: 500px)': {
@@ -76,7 +76,7 @@ export const cardContainerStyle = style({
       height: '1009px',
       gap: '10px',
     },
-    'screen and (max-width: 1025px)': {
+    'screen and (max-width: 1668px)': {
       width: '964px',
       height: '1176px',
       gap: '15px',

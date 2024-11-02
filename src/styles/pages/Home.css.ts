@@ -23,7 +23,7 @@ export const sectionStyle = style({
       paddingLeft: '71px',
       justifyContent: 'center',
     },
-    'screen and (max-width: 1025px)': {
+    'screen and (max-width: 1668px)': {
       paddingLeft: '71px',
       justifyContent: 'center',
     },
@@ -60,7 +60,7 @@ export const buttonStyle = style({
       padding: '17px 36px',
       height: '116px',
     },
-    'screen and (max-width: 1025px)': {
+    'screen and (max-width: 1668px)': {
       fontSize: '100px',
       lineHeight: 'normal',
       padding: '8px 33px',

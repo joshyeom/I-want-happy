@@ -8,7 +8,7 @@ export const gridSectionStyle = style({
       gridTemplateColumns: 'repeat(5, 1fr)',
       gap: '20px',
     },
-    'screen and (max-width: 1025px)': {
+    'screen and (max-width: 1668px)': {
       gridTemplateColumns: 'repeat(2, 1fr)',
       gap: '20px',
     },

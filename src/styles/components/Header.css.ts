@@ -32,7 +32,7 @@ export const allButtons = style({
       flexDirection: 'row',
       right: '-24%',
     },
-    'screen and (max-width: 1025px)': {
+    'screen and (max-width: 1668px)': {
       gap: '24px',
       flexDirection: 'row',
     },
@@ -69,7 +69,7 @@ export const allHeaderStyle = style({
       fontSize: '21px',
       padding: '65px 51px',
     },
-    'screen and (max-width: 1025px)': {
+    'screen and (max-width: 1668px)': {
       width: '100vw',
       fontSize: '21px',
       padding: '65px 51px',
