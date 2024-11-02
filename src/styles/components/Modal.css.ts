@@ -16,7 +16,7 @@ export const ModalStyle = style({
       flexDirection: 'row',
       gap: '93px',
     },
-    'screen and (max-width: 1284px)': {
+    'screen and (max-width: 1668px)': {
       flexDirection: 'row',
       gap: '27px',
     },
@@ -38,7 +38,7 @@ export const ModalImageStyle = style({
       width: '595px',
       height: '842px',
     },
-    'screen and (max-width: 1284px)': {
+    'screen and (max-width: 1668px)': {
       width: '450px',
       height: '636px',
     },
@@ -55,7 +55,7 @@ export const oneModalImageStyle = style({
       width: '595px',
       height: '842px',
     },
-    'screen and (max-width: 1284px)': {
+    'screen and (max-width: 1668px)': {
       width: '595px',
       height: '842px',
     },
