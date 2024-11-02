@@ -39,7 +39,7 @@ export const titleStyle = style({
     },
     'screen and (max-width: 500px)': {
       fontSize: '138px',
-      marginTop: '500px',
+      marginTop: '400px',
       paddingLeft: '18px',
     },
   },
