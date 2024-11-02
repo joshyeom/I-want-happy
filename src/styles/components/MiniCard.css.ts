@@ -11,7 +11,7 @@ export const miniCardStyle = style({
       width: '64px',
       height: '91px',
     },
-    'screen and (max-width: 1025px)': {
+    'screen and (max-width: 1284px)': {
       width: '73px',
       height: '106px',
     },
@@ -34,7 +34,7 @@ export const miniHoverStyle = style({
       width: '64px',
       height: '91px',
     },
-    'screen and (max-width: 1025px)': {
+    'screen and (max-width: 1284px)': {
       width: '73px',
       height: '106px',
     },
