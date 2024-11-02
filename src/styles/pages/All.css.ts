@@ -33,6 +33,7 @@ export const titleStyle = style({
       paddingBottom: '45px',
     },
     'screen and (max-width: 1668px)': {
+      fontSize: '160px',
       lineHeight: '0.8',
       paddingBottom: '0',
     },
@@ -72,8 +73,8 @@ export const cardContainerStyle = style({
     },
     'screen and (max-width: 1668px)': {
       width: '600px',
-      height: '800px',
-      marginRight: '51px',
+      height: '780px',
+      marginRight: '30px',
       gap: '10px',
     },
     'screen and (max-width: 500px)': {
