@@ -9,10 +9,6 @@ export const mainStyle = style({
       overflow: 'hidden',
       flexDirection: 'row',
     },
-    'screen and (max-width: 1668px)': {
-      overflowY: 'scroll',
-      flexDirection: 'column',
-    },
     'screen and (max-width: 500px)': {
       overflowY: 'scroll',
       flexDirection: 'column',
@@ -37,9 +33,8 @@ export const titleStyle = style({
       paddingBottom: '45px',
     },
     'screen and (max-width: 1668px)': {
-      fontSize: '300px',
-      marginTop: '180px',
-      paddingLeft: '23px',
+      lineHeight: '0.8',
+      paddingBottom: '0',
     },
     'screen and (max-width: 500px)': {
       fontSize: '138px',
@@ -57,7 +52,7 @@ export const sectionStyle = style({
       padding: '45px',
     },
     'screen and (max-width: 1668px)': {
-      padding: '0 30px 13px 30px',
+      padding: '10px 0',
     },
     'screen and (max-width: 500px)': {
       padding: '0 30px 13px 30px',
@@ -69,7 +64,6 @@ export const sectionStyle = style({
 export const cardContainerStyle = style({
   display: 'grid',
   gridTemplateColumns: 'repeat(10, 1fr)',
-  gridAutoRows: '2fr',
   '@media': {
     'screen and (max-width: 2048px)': {
       width: '766px',
@@ -77,9 +71,10 @@ export const cardContainerStyle = style({
       gap: '10px',
     },
     'screen and (max-width: 1668px)': {
-      width: '964px',
-      height: '1176px',
-      gap: '15px',
+      width: '600px',
+      height: '800px',
+      marginRight: '51px',
+      gap: '10px',
     },
     'screen and (max-width: 500px)': {
       width: '346px',
