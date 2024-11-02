@@ -15,7 +15,7 @@
   
   body{
     font-family: 'Apple SD Gothic Neo';
-    overscroll-behavior: none;
+    overscroll-behavior: contain;
   }
 
   /* 제목 요소의 기본 스타일 초기화 */
