@@ -6,14 +6,16 @@ export const miniCardStyle = style({
   left: 0,
   objectFit: 'fill',
   zIndex: 1, // 스켈레톤 뒤에 배치
+  width: '100%',
+  height: '100%',
   '@media': {
     'screen and (max-width: 2048px)': {
       width: '64px',
       height: '91px',
     },
     'screen and (max-width: 1668px)': {
-      width: '73px',
-      height: '106px',
+      width: '100%',
+      height: '100%',
     },
     'screen and (max-width: 500px)': {
       width: '28px',
@@ -35,8 +37,8 @@ export const miniHoverStyle = style({
       height: '91px',
     },
     'screen and (max-width: 1668px)': {
-      width: '73px',
-      height: '106px',
+      width: '100%',
+      height: '100%',
     },
     'screen and (max-width: 500px)': {
       width: '28px',

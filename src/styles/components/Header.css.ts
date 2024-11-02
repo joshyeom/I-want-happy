@@ -70,7 +70,7 @@ export const allHeaderStyle = style({
       padding: '65px 51px',
     },
     'screen and (max-width: 1668px)': {
-      width: '100vw',
+      width: '40vw',
       fontSize: '21px',
       padding: '65px 51px',
     },
