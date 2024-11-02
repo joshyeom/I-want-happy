@@ -35,6 +35,7 @@ export const allButtons = style({
     'screen and (max-width: 1668px)': {
       gap: '24px',
       flexDirection: 'row',
+      top: '-20px',
     },
     'screen and (max-width: 500px)': {
       gap: '12px',
